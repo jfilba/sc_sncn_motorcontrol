@@ -362,7 +362,18 @@ void pwm_service_general(
 
 } // pwm_service_general
 
-
+/**
+ * @brief Initialize the settings of electric brake
+ *
+ * @param i_update_brake        interface for transfering the brake settings into pwm server
+ * @param ifm_tile_usec         number of clock ticks in one microsecond in ifm tile
+ * @param vdc                   dc-bus voltage in volts
+ * @param voltage_pull_brake    required voltage to release the brake at startup (in milli-volts)
+ * @param time_pull_brake       amout of time in which the pull-voltage is applied to the brake (in milli-seconds)
+ * @param voltage_hold_brake    required voltage to hold the brake after it is released (in milli-volts)
+ *
+ * @return void
+ */
 void init_brake(client interface update_brake i_update_brake, int ifm_tile_usec,
         int v_dc, int voltage_pull_brake, int time_pull_brake, int voltage_hold_brake)
 {

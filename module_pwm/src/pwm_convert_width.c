@@ -127,7 +127,6 @@ static void convert_phase_pulse_widths(
 	unsigned int pwm_max_value,
 	unsigned int pwm_deadtime
 )
-
 {
 	unsigned lo_wid = (hi_wid + pwm_deadtime);
 
